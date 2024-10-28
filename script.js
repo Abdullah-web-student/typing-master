@@ -23,14 +23,13 @@ let wrongCount = 0;
 const correctCounter = document.querySelector(".rt");
 const wrongCounter = document.querySelector(".wr");
 user.addEventListener('keyup', (e) => {
-    timer()
 
     if (user.value == h.innerHTML) {
         func1();
-        user.value = '';
         correctCount++;
         correctCounter.textContent = correctCount;
         correctCounter.classList.add("show_counters")
+        user.value = '';
         
         
     } else {
@@ -39,6 +38,7 @@ user.addEventListener('keyup', (e) => {
         wrongCounter.textContent = wrongCount;
         wrongCounter.classList.add("show_counters")
     }
+    timer()
 
 
 });
@@ -60,7 +60,7 @@ function timer(){
   }, 1000) // each 1 second
 }
 
-function pause(){
-  clearInterval(timer);
-}
+// function pause(){
+//   clearInterval(timer);
+// }
 // pause();
