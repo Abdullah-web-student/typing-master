@@ -26,10 +26,10 @@ user.addEventListener('keyup', (e) => {
 
     if (user.value == h.innerHTML) {
         func1();
+        user.value = '';
         correctCount++;
         correctCounter.textContent = correctCount;
         correctCounter.classList.add("show_counters")
-        user.value = '';
         
         
     } else {
@@ -60,7 +60,7 @@ function timer(){
   }, 1000) // each 1 second
 }
 
-// function pause(){
-//   clearInterval(timer);
-// }
+function pause(){
+  clearInterval(timer);
+}
 // pause();
